@@ -14,12 +14,10 @@ chrome_browser.get("https://web.whatsapp.com/")
 
 time.sleep(15)
 
-with open('./files/water.json', 'r') as data_file:
+with open('./files/test2.json', 'r') as data_file:
     data = json.load(data_file)
     name = data['name']
     message = data['message']
-
-print("{}, {}".format(name, message))
 
 chrome_browser.find_element_by_xpath('//span[@title = "{}"]'.format(name)).click()
 chrome_browser.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[2]/div/div[2]').send_keys(message)
