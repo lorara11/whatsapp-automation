@@ -12,9 +12,9 @@ chrome_options.add_experimental_option('useAutomationExtension', False)
 chrome_browser = Chrome(executable_path= os.getcwd() + '/chromedriver_linux64/chromedriver', options=chrome_options)
 chrome_browser.get("https://web.whatsapp.com/")
 
-time.sleep(15)
+time.sleep(30)
 
-with open('./files/test2.json', 'r') as data_file:
+with open('./files/b12.json', 'r') as data_file:
     data = json.load(data_file)
     name = data['name']
     message = data['message']
